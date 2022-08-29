@@ -331,13 +331,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373281018}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.97, y: 5.18, z: 7.55661}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.15875626, y: 4.85, z: 1.1768112}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 2114528730}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &528608709 stripped
 GameObject:
@@ -356,9 +356,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1603918075}
     m_Modifications:
+    - target: {fileID: 2237381400100045275, guid: 186672ce3b54741089388135538bf597, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5202193828231641029, guid: 186672ce3b54741089388135538bf597, type: 3}
       propertyPath: m_Name
       value: POWERUP_Bulletx2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7485633176044079821, guid: 186672ce3b54741089388135538bf597, type: 3}
+      propertyPath: m_Name
+      value: BULLETX2
       objectReference: {fileID: 0}
     - target: {fileID: 8426637097824160692, guid: 186672ce3b54741089388135538bf597, type: 3}
       propertyPath: SpeedGyro
@@ -539,11 +547,7 @@ MonoBehaviour:
   - {fileID: 243648855}
   - {fileID: 528608709}
   tankTop: {fileID: 373281019}
-  powerUpsList:
-  - {fileID: 1434477883}
-  - {fileID: 1168286480}
-  - {fileID: 243648855}
-  - {fileID: 528608709}
+  powerUpList: []
 --- !u!4 &793692916
 Transform:
   m_ObjectHideFlags: 0
@@ -800,6 +804,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1603918075}
     m_Modifications:
+    - target: {fileID: 79122747702252170, guid: 691398e2e1f4e4289b0667ae160a2571, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3099083242969773923, guid: 691398e2e1f4e4289b0667ae160a2571, type: 3}
       propertyPath: SpeedGyro
       value: 1
@@ -852,8 +860,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8788652118917061020, guid: 691398e2e1f4e4289b0667ae160a2571, type: 3}
+      propertyPath: m_Name
+      value: SHIELD
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 691398e2e1f4e4289b0667ae160a2571, type: 3}
+--- !u!1 &1575507477 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8298964527640936750, guid: 6945b2686e7111c4baff04fe82e0acca, type: 3}
+  m_PrefabInstance: {fileID: 1700857783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1603918074
 GameObject:
   m_ObjectHideFlags: 0
@@ -928,6 +945,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1603918075}
     m_Modifications:
+    - target: {fileID: 3287770970406893370, guid: 7f7d77e9af9384ea195320b0c9f019db, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5498715828582296110, guid: 7f7d77e9af9384ea195320b0c9f019db, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -972,6 +993,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6146863146281385004, guid: 7f7d77e9af9384ea195320b0c9f019db, type: 3}
+      propertyPath: m_Name
+      value: "SP\xCAED"
+      objectReference: {fileID: 0}
     - target: {fileID: 7099303783420891449, guid: 7f7d77e9af9384ea195320b0c9f019db, type: 3}
       propertyPath: SpeedGyro
       value: 1
@@ -989,6 +1014,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1670079911}
     m_Modifications:
+    - target: {fileID: 3899301695450339290, guid: 6945b2686e7111c4baff04fe82e0acca, type: 3}
+      propertyPath: m_Size.y
+      value: 5.2218094
+      objectReference: {fileID: 0}
+    - target: {fileID: 3899301695450339290, guid: 6945b2686e7111c4baff04fe82e0acca, type: 3}
+      propertyPath: m_Center.y
+      value: -0.087594986
+      objectReference: {fileID: 0}
     - target: {fileID: 8298964527640936745, guid: 6945b2686e7111c4baff04fe82e0acca, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1046,6 +1079,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1603918075}
     m_Modifications:
+    - target: {fileID: 50404087922182647, guid: d9322e061bed74179b829ac70f4ac33d, type: 3}
+      propertyPath: m_Name
+      value: HEALTH
+      objectReference: {fileID: 0}
     - target: {fileID: 1851619222319914997, guid: d9322e061bed74179b829ac70f4ac33d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1105,3 +1142,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8298964527640936745, guid: 6945b2686e7111c4baff04fe82e0acca, type: 3}
   m_PrefabInstance: {fileID: 1700857783}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2114528731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575507477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3896589cb6207248a965f84b7368878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpManager: {fileID: 793692915}
