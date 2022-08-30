@@ -332,7 +332,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 373281018}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.15875626, y: 4.85, z: 1.1768112}
+  m_LocalPosition: {x: 0.13, y: 5.33, z: -0.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -416,7 +416,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1096780160371505822, guid: 186672ce3b54741089388135538bf597, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 186672ce3b54741089388135538bf597, type: 3}
 --- !u!1 &705507993
 GameObject:
@@ -548,6 +549,7 @@ MonoBehaviour:
   - {fileID: 1434477883}
   tankTop: {fileID: 373281019}
   powerUpList: []
+  PowerUpShield: {fileID: 919132149155446097, guid: 43174f754356c6847ab6d4a0cec981e5, type: 3}
 --- !u!4 &793692916
 Transform:
   m_ObjectHideFlags: 0
@@ -816,6 +818,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SHIELD
       objectReference: {fileID: 0}
+    - target: {fileID: 6207148335842485396, guid: 691398e2e1f4e4289b0667ae160a2571, type: 3}
+      propertyPath: m_TagString
+      value: PowerUp
+      objectReference: {fileID: 0}
     - target: {fileID: 6986990772922126238, guid: 691398e2e1f4e4289b0667ae160a2571, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -864,7 +870,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shield
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8788652118917061020, guid: 691398e2e1f4e4289b0667ae160a2571, type: 3}
+      propertyPath: m_TagString
+      value: PowerUp
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1237738388138109391, guid: 691398e2e1f4e4289b0667ae160a2571, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 691398e2e1f4e4289b0667ae160a2571, type: 3}
 --- !u!1 &1575507477 stripped
 GameObject:
@@ -1136,7 +1147,8 @@ PrefabInstance:
       propertyPath: SpeedGyro
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7523780257704016292, guid: d9322e061bed74179b829ac70f4ac33d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d9322e061bed74179b829ac70f4ac33d, type: 3}
 --- !u!4 &2114528730 stripped
 Transform:

@@ -14,6 +14,8 @@ public class PowerUpManager : MonoBehaviour
     [SerializeField] List<GameObject> powerUpList;
     public List<GameObject> PowerUpList { get => powerUpList; set => powerUpList = value; }
 
+    public GameObject PowerUpShield;
+
     private Queue powerUpQueue;
     public Queue PowerUpQueue { get => powerUpQueue; set => powerUpQueue = value; }
     
@@ -37,26 +39,11 @@ public class PowerUpManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            if (IsQueueEmpty())
-            {
-                GameObject powerUp = powerUpQueue.Dequeue() as GameObject;
-                EquipPowerUp(powerUp);
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            if (IsStackEmpty())
-            {
-                GameObject powerUp = powerUpStack.Pop() as GameObject;
-                EquipPowerUp(powerUp);
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3)) EquipPowerUp(powerUpDirectory["Shield"]);
-        if (Input.GetKeyDown(KeyCode.Alpha4)) EquipPowerUp(powerUpDirectory["Health"]);
-        if (Input.GetKeyDown(KeyCode.Alpha5)) EquipPowerUp(powerUpDirectory["Bullet"]);
-        if (Input.GetKeyDown(KeyCode.Alpha6)) EquipPowerUp(powerUpDirectory["Speed"]);
+       
+        if (Input.GetKeyDown(KeyCode.Alpha1)) EquipPowerUp(powerUpDirectory["Shield"]);            
+        if (Input.GetKeyDown(KeyCode.Alpha2)) EquipPowerUp(powerUpDirectory["Health"]);
+        if (Input.GetKeyDown(KeyCode.Alpha3)) EquipPowerUp(powerUpDirectory["Bullet"]);
+        if (Input.GetKeyDown(KeyCode.Alpha4)) EquipPowerUp(powerUpDirectory["Speed"]);
     }
 
     private bool IsQueueEmpty()
@@ -69,23 +56,15 @@ public class PowerUpManager : MonoBehaviour
         return powerUpStack.Count > 0;
     }
 
-    /*
-    void DiseableAllPowerUps()
-    {
-
-        for (int i = 0; i < powerUps.Length; i++)
-        {
-            powerUps[i].SetActive(false); // 0 -> Weapon A  1->WB / 2 -> WC
-        }
-    }
-    */
-
+    
     private void EquipPowerUp(GameObject powerUp)
     {
         UnequipPowerUps();
         powerUp.SetActive(true);
         powerUp.transform.parent = tankTop;
         powerUp.transform.localPosition = Vector3.zero;
+        powerUp.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        
     }     
     
     private void UnequipPowerUps()
