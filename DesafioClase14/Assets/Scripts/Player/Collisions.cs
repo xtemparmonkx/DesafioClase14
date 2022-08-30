@@ -27,14 +27,14 @@ public class Collisions : MonoBehaviour
             powerUpManager.PowerUpQueue.Enqueue(other.gameObject);
             Debug.Log("ELEMENTOS EN LA COLA " + powerUpManager.PowerUpQueue.Count);
             //STACK
-            //powerUpManager.PowerUpStack.Push(other.gameObject);
-            //Debug.Log("ELEMENTOS EN LA STACK " + powerUpManager.PowerUpStack.Count);
+            powerUpManager.PowerUpStack.Push(other.gameObject);
+            Debug.Log("ELEMENTOS EN LA STACK " + powerUpManager.PowerUpStack.Count);
             //DIC
-           // if (!powerUpManager.PowerUpDirectory.ContainsKey(other.gameObject.name))
-            //{
-            //    powerUpManager.PowerUpDirectory.Add(other.gameObject.name, other.gameObject);
-            //    Debug.Log(powerUpManager.PowerUpDirectory[other.gameObject.name]);
-            //}
+            if (!powerUpManager.PowerUpDirectory.ContainsKey(other.gameObject.name))
+            {
+                powerUpManager.PowerUpDirectory.Add(other.gameObject.name, other.gameObject);
+                Debug.Log(powerUpManager.PowerUpDirectory[other.gameObject.name]);
+            }
             
         }
     }

@@ -362,11 +362,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5202193828231641029, guid: 186672ce3b54741089388135538bf597, type: 3}
       propertyPath: m_Name
-      value: POWERUP_Bulletx2
+      value: BULLET
       objectReference: {fileID: 0}
     - target: {fileID: 7485633176044079821, guid: 186672ce3b54741089388135538bf597, type: 3}
       propertyPath: m_Name
-      value: BULLETX2
+      value: Bullet
       objectReference: {fileID: 0}
     - target: {fileID: 8426637097824160692, guid: 186672ce3b54741089388135538bf597, type: 3}
       propertyPath: SpeedGyro
@@ -374,7 +374,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9143178236732185807, guid: 186672ce3b54741089388135538bf597, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9143178236732185807, guid: 186672ce3b54741089388135538bf597, type: 3}
       propertyPath: m_LocalPosition.x
@@ -542,10 +542,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUps:
-  - {fileID: 1434477883}
   - {fileID: 1168286480}
   - {fileID: 243648855}
   - {fileID: 528608709}
+  - {fileID: 1434477883}
   tankTop: {fileID: 373281019}
   powerUpList: []
 --- !u!4 &793692916
@@ -814,11 +814,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6207148335842485396, guid: 691398e2e1f4e4289b0667ae160a2571, type: 3}
       propertyPath: m_Name
-      value: POWERUP_Shild
+      value: SHIELD
       objectReference: {fileID: 0}
     - target: {fileID: 6986990772922126238, guid: 691398e2e1f4e4289b0667ae160a2571, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6986990772922126238, guid: 691398e2e1f4e4289b0667ae160a2571, type: 3}
       propertyPath: m_LocalPosition.x
@@ -862,7 +862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8788652118917061020, guid: 691398e2e1f4e4289b0667ae160a2571, type: 3}
       propertyPath: m_Name
-      value: SHIELD
+      value: Shield
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 691398e2e1f4e4289b0667ae160a2571, type: 3}
@@ -899,10 +899,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1434477884}
   - {fileID: 1168286481}
   - {fileID: 243648856}
   - {fileID: 528608710}
+  - {fileID: 1434477884}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -951,7 +951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5498715828582296110, guid: 7f7d77e9af9384ea195320b0c9f019db, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5498715828582296110, guid: 7f7d77e9af9384ea195320b0c9f019db, type: 3}
       propertyPath: m_LocalPosition.x
@@ -995,7 +995,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6146863146281385004, guid: 7f7d77e9af9384ea195320b0c9f019db, type: 3}
       propertyPath: m_Name
-      value: "SP\xCAED"
+      value: Speed
       objectReference: {fileID: 0}
     - target: {fileID: 7099303783420891449, guid: 7f7d77e9af9384ea195320b0c9f019db, type: 3}
       propertyPath: SpeedGyro
@@ -1003,9 +1003,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8835397784955765028, guid: 7f7d77e9af9384ea195320b0c9f019db, type: 3}
       propertyPath: m_Name
-      value: POWERUP_Speed
+      value: SPEED
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4437399676871085183, guid: 7f7d77e9af9384ea195320b0c9f019db, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7f7d77e9af9384ea195320b0c9f019db, type: 3}
 --- !u!1001 &1700857783
 PrefabInstance:
@@ -1081,11 +1082,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 50404087922182647, guid: d9322e061bed74179b829ac70f4ac33d, type: 3}
       propertyPath: m_Name
-      value: HEALTH
+      value: Health
       objectReference: {fileID: 0}
     - target: {fileID: 1851619222319914997, guid: d9322e061bed74179b829ac70f4ac33d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1851619222319914997, guid: d9322e061bed74179b829ac70f4ac33d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1129,7 +1130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3413933369288897791, guid: d9322e061bed74179b829ac70f4ac33d, type: 3}
       propertyPath: m_Name
-      value: POWERUP_Health
+      value: HEALTH
       objectReference: {fileID: 0}
     - target: {fileID: 5285759942232173652, guid: d9322e061bed74179b829ac70f4ac33d, type: 3}
       propertyPath: SpeedGyro

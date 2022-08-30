@@ -29,11 +29,10 @@ public class PowerUpManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //powerUps[0].SetActive(true);
-        //powerUps[0].transform.parent = tankTop;
-        //powerUps[0].transform.position = Vector3.zero;
         powerUpQueue = new Queue();
         powerUpList = new List<GameObject>();
+        powerUpStack = new Stack();
+        powerUpDirectory = new Dictionary<string, GameObject>();
     }
 
     void Update()
@@ -46,6 +45,18 @@ public class PowerUpManager : MonoBehaviour
                 EquipPowerUp(powerUp);
             }
         }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            if (IsStackEmpty())
+            {
+                GameObject powerUp = powerUpStack.Pop() as GameObject;
+                EquipPowerUp(powerUp);
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3)) EquipPowerUp(powerUpDirectory["Shield"]);
+        if (Input.GetKeyDown(KeyCode.Alpha4)) EquipPowerUp(powerUpDirectory["Health"]);
+        if (Input.GetKeyDown(KeyCode.Alpha5)) EquipPowerUp(powerUpDirectory["Bullet"]);
+        if (Input.GetKeyDown(KeyCode.Alpha6)) EquipPowerUp(powerUpDirectory["Speed"]);
     }
 
     private bool IsQueueEmpty()
@@ -53,6 +64,12 @@ public class PowerUpManager : MonoBehaviour
         return powerUpQueue.Count > 0;
     }
 
+    private bool IsStackEmpty()
+    {
+        return powerUpStack.Count > 0;
+    }
+
+    /*
     void DiseableAllPowerUps()
     {
 
@@ -61,10 +78,11 @@ public class PowerUpManager : MonoBehaviour
             powerUps[i].SetActive(false); // 0 -> Weapon A  1->WB / 2 -> WC
         }
     }
+    */
 
     private void EquipPowerUp(GameObject powerUp)
     {
-        //UnequipPowerUps();
+        UnequipPowerUps();
         powerUp.SetActive(true);
         powerUp.transform.parent = tankTop;
         powerUp.transform.localPosition = Vector3.zero;
