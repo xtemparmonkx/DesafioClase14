@@ -15,6 +15,12 @@ public class PowerUpManager : MonoBehaviour
     public List<GameObject> PowerUpList { get => powerUpList; set => powerUpList = value; }
 
     public GameObject PowerUpShield;
+    public float shieldDuration;
+    //public GameObject hitEffect;
+    //public List<ShieldData> shieldUpgList = new List<ShieldData>();
+
+    private WaitForSeconds shieldDelay;
+    private Collider col;
 
     private Queue powerUpQueue;
     public Queue PowerUpQueue { get => powerUpQueue; set => powerUpQueue = value; }
@@ -40,7 +46,7 @@ public class PowerUpManager : MonoBehaviour
     void Update()
     {
        
-        if (Input.GetKeyDown(KeyCode.Alpha1)) EquipPowerUp(powerUpDirectory["Shield"]);            
+        if (Input.GetKeyDown(KeyCode.Alpha1)) EquipPowerUp(powerUpDirectory["Shield"]);
         if (Input.GetKeyDown(KeyCode.Alpha2)) EquipPowerUp(powerUpDirectory["Health"]);
         if (Input.GetKeyDown(KeyCode.Alpha3)) EquipPowerUp(powerUpDirectory["Bullet"]);
         if (Input.GetKeyDown(KeyCode.Alpha4)) EquipPowerUp(powerUpDirectory["Speed"]);
@@ -75,8 +81,35 @@ public class PowerUpManager : MonoBehaviour
             {
                 child.parent = null;
                 child.transform.position = new Vector3(Random.Range(0f, 3f), 1f, Random.Range(0f, 3f));
-                child.gameObject.SetActive(true);
+                child.gameObject.SetActive(false);
             }
         }
     }
-}
+
+    IEnumerator EngageShield()
+    {
+        col.enabled = true;
+
+        float inAnimDuration = 0.5f;
+        float outAnimDuration = 0.5f;
+
+        while (inAnimDuration > 0f)
+        {
+            inAnimDuration -= Time.deltaTime;
+            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.one, 0.1f);
+            yield return null;
+        }
+
+        yield return shieldDelay;
+
+        while (outAnimDuration > 0f)
+        {
+            outAnimDuration -= Time.deltaTime;
+            transform.localScale = Vector3.Lerp(transform.localScale, Vector3.zero, 0.1f);
+            yield return null;
+        }
+
+        transform.localScale = Vector3.zero;
+        col.enabled = false;
+    }
+    }
